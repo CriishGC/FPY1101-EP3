@@ -1,0 +1,98 @@
+
+
+
+libros = []
+prestamos = []
+def registrar_libro ():
+    titulo=input("Ingrese titulo del libro")
+    autor=input("Ingrese el autor del libro: ")
+    año =int(input("Ingrese año de publicacion del libro: "))
+    sku =input ("Ingresar SKU: ")
+    
+    
+    if not titulo or autor or año or sku in prestamos:
+        print ("Error: ingrese correctamente los datos.")
+        return
+    libro = {
+        "titulo": titulo,
+        "autor": autor,
+        "año": año,
+        "sku": sku
+    }
+    libros.append(libro)
+    print("Se registro correctamente")
+
+    
+def prestar_libro():
+    usuario = input("Ingresar nombre de usuario: ")
+    sku = input ("Ingrese SKU")
+    if sku  in libros(sku): 
+        print("el libro existe")
+    elif sku in listar_libro:
+        print("Lo sentimos, el libro no esta disponible")
+    
+
+        
+
+    
+
+
+
+
+
+def listar_libro():
+    if not libros:
+        print("No se han registrado libros.")
+        return
+    else:   
+        print("TITULO\tAUTOR\tAÑO\aSKU")
+        for i in libros enumerate:
+    
+
+
+
+
+    
+def imprimir_prestamo():
+    print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+def menu():
+    while True:
+        print("Registrar libro")
+        print("Prestar libro")
+        print("Listar todos los libros")
+        print("imprimir reporte de prestamos")
+        print("Salir del programa")
+        try:
+            op = input()
+            if op == 1:
+                registrar_libro
+            elif op == 2:
+                prestar_libro
+            elif op == 3:
+                listar_libros
+            elif op == 4:
+                imprimir_prestamos    
+            elif op == 5:
+                print("Fin del programa.")
+                break
+            else:
+                print("Elige una de las opciones.")    
+        except ValueError:
+            print("ingrese una opcion valida.")        
+
+
+if ___name___ == "___main___":
+    main()
